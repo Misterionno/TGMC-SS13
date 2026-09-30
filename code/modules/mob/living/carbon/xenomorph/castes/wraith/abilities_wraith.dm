@@ -232,6 +232,7 @@ GLOBAL_LIST_INIT(wraith_banish_very_short_duration_list, typecacheof(list(
 			CRASH("failed to reserve an area for [owner]'s Banish.")
 
 	var/turf/target_turf = reserved_area.reserved_turfs[5]
+	target_turf.ChangeTurf(/turf/open/beach/sand)
 	new /area/arrival(target_turf) //So we don't get instagibbed from the space area
 
 	if(isxeno(banishment_target)) //If we're a xeno, disgorge all vored contents
